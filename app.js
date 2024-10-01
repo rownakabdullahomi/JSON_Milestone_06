@@ -11,7 +11,12 @@ const loadUsers = () => {
 }
 
 const displayUsers = (data) => {
-    console.log(data);
+    const ul = document.getElementById("users-list");
+    for(const user of data){
+        const li = document.createElement("li");
+        li.innerText = user.name;
+        ul.appendChild(li);
+    }
 }
 
 // console.log(typeof loadUsers);
